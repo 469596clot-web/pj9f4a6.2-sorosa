@@ -4,15 +4,19 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |v|
     # v.gui = true
     v.name = "pj9f4act62-sorosa"
-    v.memory = 2048
-    v.cpus = 1
+    v.memory = 3072
+    v.cpus = 2
     v.customize ['modifyvm', :id, '--clipboard', 'bidirectional']     
   end
+
+  config.vm.network "public_network"
 
   config.vm.network "forwarded_port", guest: 80, host: 18000
   #config.vm.network "forwarded_port", guest: 8080, host: 8080
   #config.vm.network "forwarded_port", guest: 8888, host: 8888
   
+  config.vm.synced_folder "./projectes", "/home/vagrant/projectes"
+
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update -y
     sudo apt-get install -y net-tools
