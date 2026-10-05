@@ -19,6 +19,8 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y apache2 apache2-doc
     sudo apt-get install -y libapache2-mod-php
     sudo apt-get install -y php8.2 
+    sudo apt-get install -y composer php-xml
+    mkdir /home/vagrant/pj9f4a6.5
+    composer require dompdf/dompdf -d /home/vagrant/pj9f4a6.5
   SHELL
-
 end
