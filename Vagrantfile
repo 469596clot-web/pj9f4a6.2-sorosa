@@ -1,3 +1,4 @@
+INTERFICIE_XARXA = "Wi-Fi"
 IMATGE_BASE = "generic/debian12"
 ID = "-sorosa"
 BASE_HOSTNAME = "pj9f4a62"
@@ -22,7 +23,7 @@ Vagrant.configure("2") do |config|
     v.customize ['modifyvm', :id, '--clipboard', 'bidirectional']     
   end
 
-  config.vm.network TIPUS_XARXA
+  config.vm.network TIPUS_XARXA, bridge: INTERFICIE_XARXA
 
   config.vm.network "forwarded_port", guest: PORT_GUEST, host: PORT_HOST
   #config.vm.network "forwarded_port", guest: 8080, host: 8080
