@@ -1,4 +1,4 @@
-INTERFICIE_XARXA = "Wi-Fi"
+INTERFICIE_XARXA = "Killer(R) Wi-Fi 6 AX1650i 160MHz Wireless Network Adapter (201NGW)"
 IMATGE_BASE = "generic/debian12"
 ID = "-sorosa"
 BASE_HOSTNAME = "pj9f4a62"
